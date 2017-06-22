@@ -1,92 +1,230 @@
-
-div {
-	/* These are technically the same, but use both */
-	overflow-wrap: break-word;
-	word-wrap: break-word;
-
-	-ms-word-break: break-all;
-	/* This is the dangerous one in WebKit, as it breaks things wherever */
-	word-break: break-all;
-	/* Instead use this non-standard one: */
-	word-break: break-word;
-
-	/* Adds a hyphen where the word breaks, if supported (No Blink) */
-	-ms-hyphens: auto;
-	-moz-hyphens: auto;
-	-webkit-hyphens: auto;
-	hyphens: auto;
+.clear-bottom {
+    &:after{
+        clear: both;
+        display: block;
+        content: "";
+    }
 }
-.clear {clear: both;}
-.wrapper {
-	width: 100%;
-	margin: 0px auto;
-	padding: 20px;
-	
-	@media screen and (min-width: $tabwidth) {
-		width: 100%;
-	}
-	@media screen and (min-width: $deskwidth) {
-		width: 1200px;
-		padding: 0px;
-	}
+.copy {
+  font-size: 18px;
+  color: black;
+  @media screen and (min-width: $tabwidth){
+    font-size: 22px;
+  }
+  > *:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  > *:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  p {
+    margin: 20px 0;
+  }
+  strong, b, em {
+    font-weight: 800;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    &:hover {
+      color: black;
+    }
+  }
+  h1, h2, h3 {
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    color: $color__indiana-blue;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  ul, ol {
+    padding: 0;
+    margin: 0 0 20px 20px;
+    font-size: inherit;
+    li {
+      margin: 0 0 0 20px;
+      font-size: inherit;
+      padding: 0;
+      list-style-type: square;
+      a {
+        cursor: pointer;
+        &:hover {
+          color: black;
+        }
+      }
+      ul.sub-menu {
+        margin: 0;
+      }
+    }
+  }
 }
+#masthead {
+    background-repeat: repeat;
+    @include flexbox();
+    @include flexbox-justify(center);
+    @include flexbox-align-content(stretch);
+    @include flexbox-align-items(stretch);
+    @include flexbox-direction(column);
+    padding: 10px 20px 20px 20px;
+    @media screen and (min-width: $tabwidth){
+        @include flexbox-direction(row);
+        padding: 2% 5% 20px 5%;
+    }
+    >.col-1 {
+        width: 80%;
+        margin: 0 auto 20px auto;
+        @media screen and (min-width: $tabwidth){
+            width: 20%;
+            margin: 0;
+            @include flexbox-align-self(flex-end);
+        }
+        .logo {
+            margin: 0;
+            @media screen and (min-width: $tabwidth){
+                margin: 0 0 -40px 0;
+                position: relative;
+                z-index: 2;
+            }
+            a {
+                display: block;
+                text-decoration: none;
+                img {
+                    display: block;
+                    width: 100%;
 
-.content-area {
-	width: 100%;
-	margin: 0px auto;
-	
-	@media screen and (min-width: $tabwidth) {
-		width: 66%;
-		float: left;
-		margin: 0;
-	}
-	@media screen and (min-width: $deskwidth) {
-		/*width: 1200px;*/
-	}
+                }
+            }
+        }
+    }
+    >.col-2 {
+        width: 100%;
+        margin: 0;
+        @include flexbox();
+        @include flexbox-justify(center);
+        @include flexbox-align-content(flex-start);
+        @include flexbox-align-items(flex-start);
+        @include flexbox-direction(column);
+        @media screen and (min-width: $tabwidth){
+            width: 80%;
+            margin: 0;
+        }
+        >.row-1 {
+            width: 100%;
+            text-align: center;
+            color: $color__indiana-blue;
+            font-size: 25px;
+            line-height: 1.2;
+            font-weight: 700;
+            @media screen and (min-width: $tabwidth){
+                font-size: 45px;
+                text-align: right;
+            }
+        }
+        >.row-2 {
+            width: 100%;
+            text-align: center;
+            color: $color__indiana-green;
+            font-size: 20px;
+            line-height: 1.2;
+            @media screen and (min-width: $tabwidth){
+                font-size: 30px;
+                text-align: right;
+            }
+
+        }
+        #site-navigation.row-3 {
+            margin: 20px 0 0 0;
+            width: 100%;
+            text-align: center;
+            &.toggled {
+                .menu-primary-container {
+                    display: block;
+                }
+            }
+            @media screen and (min-width: $tabwidth){
+                margin: auto 0 0 0;
+            }
+            button {
+                text-align: center;
+                padding: 10px;
+                display: inline-block;
+                box-shadow: none;
+                text-shadow: none;
+                background-color: $color__indiana-blue;
+                color: white;
+                font-size: 18px;
+                border: none;
+                border-radius: 5px;
+                @media screen and (min-width: $tabwidth){
+                    display: none;
+                }
+            }
+            .menu-primary-container{
+                display: none;
+                @media screen and (min-width: $tabwidth){
+                    display: block;
+                }
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    text-align: right;
+                    li {
+                        margin: 20px 0;
+                        padding: 0;
+                        list-style-type: none;
+                        text-align: center;
+                        &:last-child{
+                            margin: 20px 0 0 0;
+                        }
+                        @media screen and (min-width: $tabwidth){
+                           display: inline-block;
+                           margin: 0 40px;
+                            &:last-child{
+                                margin: 0 20px;
+                            }
+                        }
+                        a {
+                            color: $color__indiana-blue-green;
+                            text-decoration: none;
+                            font-weight: 700;
+                            font-size: 20px;
+                            &:hover {
+                                color: $color__indiana-blue-green;
+                            }
+                            @media screen and (min-width: $tabwidth){
+                                font-size: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
-
-.widget-area {
-	width: 100%;
-	margin: 0px auto;
-	
-	@media screen and (min-width: $tabwidth) {
-		width: 26%;
-		float: right;
-		margin: 0;
-	}
-	@media screen and (min-width: $deskwidth) {
-		/*width: 1200px;*/
-	}
-}
-
-/* Logo */
-.logo , h1.logo {
-	width: 300px;
-	height: 200px;
-	background-image: url(images/logo.png);	
-	margin: 10px auto;
-
-	@media screen and (min-width: $tabwidth) {
-		width: 300px;
-		height: 200px;
-		float: left;
-		margin: 0;
-	}
-	@media screen and (min-width: $deskwidth) {
-		/*width: 1200px;*/
-	}
-}
-.logo a, h1.logo a {
-	width: 300px;
-	height: 200px;
-	display: block;
-	text-indent: -9000px;
-
-	@media screen and (min-width: $tabwidth) {
-		width: 300px;
-		height: 200px;
-	}
-	@media screen and (min-width: $deskwidth) {
-		/*width: 1200px;*/
-	}
+#colophon {
+    padding: 20px 0;
+    background-color: $color__indiana-blue;
+    >.wrapper {
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        padding: 40px;
+        text-align: center;
+        >.row-1 {
+            color: white;
+        }
+        >.row-2 {
+            margin-top: 10px;
+            color: white;
+        }
+    }
 }

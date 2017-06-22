@@ -1,28 +1,91 @@
-.sticky {
-	display: block;
-}
+.template-index {
+    img.banner {
+        display: block;
+        width: 100%;
+    }
+    >.wrapper {
+        padding: 15px 20px 20px 20px;
+        @media screen and (min-width: $tabwidth){
+            padding: 4% 5% 5% 5%;
+        }
+        >.row-1 {
+            width: 100%;
+            text-align: center;
+            color: $color__indiana-blue;
+            font-size: 25px;
+            font-weight: 700;
+            @media screen and (min-width: $tabwidth){
+                font-size: 45px;
+            }
+        }
+        >.spacer {
+            border: 1px solid $color__indiana-blue;
+            width: 200px;
+            margin: 20px auto;
+            @media screen and (min-width: $tabwidth){
+                margin: 2% auto;
+            }
+        }
+        >.row-2 {
+            width: 100%;
+            text-align: center;
+            color: $color__indiana-green;
+            font-size: 20px;
+            @media screen and (min-width: $tabwidth){
+                font-size: 30px;
+            }
 
-.hentry {
-	margin: 0 0 1.5em;
-}
-
-.byline,
-.updated:not(.published){
-	display: none;
-}
-
-.single .byline,
-.group-blog .byline {
-	display: inline;
-}
-
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
-}
-
-.page-links {
-	clear: both;
-	margin: 0 0 1.5em;
+        }
+        >.row-3 {
+            padding: 40px 0 20px 0;
+            @media screen and (min-width: $tabwidth){
+                padding: 10% 0 5% 0;
+            }
+            >.col-1 {
+                margin: 0 0 20px 0;
+                @media screen and (min-width: $tabwidth){
+                    float: left;
+                    width: 50%;
+                    padding-right: 2%;
+                    margin: 0;
+                }
+            }
+            >.col-2 {
+                @media screen and (min-width: $tabwidth){
+                    float: left;
+                    width: 50%;
+                    padding-left: 1%;
+                }
+                .block {
+                    padding: 0 0 20px 0;
+                    @media screen and (min-width: $tabwidth){   
+                        float: left;
+                        width: 50%;
+                        padding: 0 3% 6% 3%;
+                    }
+                    img {
+                        display: block;
+                        width: 100%;
+                    }
+                    h2 {
+                        margin: 15px 0;
+                        color: $color__indiana-blue;
+                        text-align: center;
+                        text-transform: uppercase;
+                        font-size: 25px;
+                        line-height: 1;
+                        font-weight: 500;
+                        @media screen and (min-width: $tabwidth){ 
+                            font-size: 30px;
+                        }
+                    }
+                    .spacer {
+                        width: 70px;
+                        margin: 0 auto;
+                        border: 1px solid $color__indiana-blue;
+                    }
+                }
+            }
+        }
+    }
 }
