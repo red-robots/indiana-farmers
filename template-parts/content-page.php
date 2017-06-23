@@ -9,33 +9,15 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
-
-	<div class="entry-content">
-		<?php
-			the_content();
-
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'acstarter' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php
-			edit_post_link(
-				sprintf(
-					/* translators: %s: Name of current post */
-					esc_html__( 'Edit %s', 'acstarter' ),
-					the_title( '<span class="screen-reader-text">"', '"</span>', false )
-				),
-				'<span class="edit-link">',
-				'</span>'
-			);
-		?>
-	</footer><!-- .entry-footer -->
+<article id="post-<?php the_ID(); ?>" <?php post_class("template-page"); ?> style="background-image: url(<?php 
+    echo get_template_directory_uri()."/images/topography.png";
+?>);">
+	<?php $banner = get_field("banner");
+	if($banner):?>
+		<img class="banner" src="<?php echo $banner['url'];?>" alt="<?php echo $banner['alt'];?>">
+	<?php endif;?>
+	<div class="wrapper copy">
+		<header><h1><?php the_title();?></h1></header>
+		<?php the_content();?>
+	</div><!--.wrapper-->
 </article><!-- #post-## -->

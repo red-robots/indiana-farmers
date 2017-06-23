@@ -16,7 +16,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
-*//*!
+*/@import url("https://fonts.googleapis.com/css?family=Rubik:400,700");/*!
  * animate.css -http://daneden.me/animate
  * Version - 3.5.0
  * Licensed under the MIT license - http://opensource.org/licenses/MIT
@@ -1233,7 +1233,7 @@ optgroup{font-weight:bold}
 table{border-collapse:collapse;border-spacing:0}
 td,th{padding:0}
 button:focus{outline:0}
-body,button,input,select,textarea{color:black;font-family:sans-serif;font-size:16px;font-size:1rem;line-height:1.5}
+body,button,input,select,textarea{color:black;font-family:"Rubik",sans-serif;font-size:16px;font-size:1rem;line-height:1.5}
 h1,h2,h3,h4,h5,h6{clear:both}
 .entry-content h1{font-size:30px}
 p{margin-bottom:1.5em}
@@ -1372,31 +1372,33 @@ html[xmlns] .flexslider .slides{display:block}
 }.copy>*:first-child{margin-top:0;padding-top:0}
 .copy>*:last-child{margin-bottom:0;padding-bottom:0}
 .copy p{margin:20px 0}
-.copy strong,.copy b,.copy em{font-weight:800}
-.copy a{text-decoration:none;color:black;position:relative}
-.copy a:hover{color:black}
+.copy strong,.copy b,.copy em{font-weight:700;color:#15759d}
+.copy a{text-decoration:none;color:#3b94cc;position:relative}
+.copy a:hover{color:#3b94cc}
 .copy h1,.copy h2,.copy h3{margin:0 0 10px 0;text-transform:uppercase;color:#3b94cc}
-.copy h1{font-size:30px}
-.copy h2{font-size:25px}
-.copy h3{font-size:20px}
+.copy h1{color:#3b94cc;text-transform:uppercase;font-size:25px;font-weight:500}
+@media screen and (min-width:600px){.copy h1{font-size:30px}
+}.copy h2{color:#1ebca5;font-size:20px;font-weight:500}
+@media screen and (min-width:600px){.copy h2{font-size:30px}
+}.copy h3{font-size:20px}
 .copy ul,.copy ol{padding:0;margin:0 0 20px 20px;font-size:inherit}
 .copy ul li,.copy ol li{margin:0 0 0 20px;font-size:inherit;padding:0;list-style-type:square}
 .copy ul li a,.copy ol li a{cursor:pointer}
-.copy ul li a:hover,.copy ol li a:hover{color:black}
+.copy ul li a:hover,.copy ol li a:hover{color:#3b94cc}
 .copy ul li ul.sub-menu,.copy ol li ul.sub-menu{margin:0}
 #masthead{background-repeat:repeat;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-justify-content:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-align-content:stretch;-ms-flex-line-pack:stretch;align-content:stretch;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-flex-direction:column;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;padding:10px 20px 20px 20px}
-@media screen and (min-width:600px){#masthead{-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;padding:2% 5% 20px 5%}
+@media screen and (min-width:600px){#masthead{-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;padding:2% 3.5% 20px 5%}
 }#masthead>.col-1{width:80%;margin:0 auto 20px auto}
-@media screen and (min-width:600px){#masthead>.col-1{width:20%;margin:0;-webkit-align-self:flex-end;-ms-flex-item-align:end;align-self:flex-end}
+@media screen and (min-width:600px){#masthead>.col-1{width:170px;margin:0;-webkit-align-self:flex-end;-ms-flex-item-align:end;align-self:flex-end;-webkit-box-flex:0 0 auto;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto}
 }#masthead>.col-1 .logo{margin:0}
 @media screen and (min-width:600px){#masthead>.col-1 .logo{margin:0 0 -40px 0;position:relative;z-index:2}
 }#masthead>.col-1 .logo a{display:block;text-decoration:none}
 #masthead>.col-1 .logo a img{display:block;width:100%}
 #masthead>.col-2{width:100%;margin:0;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-justify-content:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-align-content:flex-start;-ms-flex-line-pack:start;align-content:flex-start;-webkit-align-items:flex-start;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;-webkit-flex-direction:column;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
-@media screen and (min-width:600px){#masthead>.col-2{width:80%;margin:0}
-}#masthead>.col-2>.row-1{width:100%;text-align:center;color:#3b94cc;font-size:25px;line-height:1.2;font-weight:700}
+@media screen and (min-width:600px){#masthead>.col-2{width:80%;margin:0;-webkit-box-flex:1 1 auto;-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto}
+}#masthead>.col-2>.row-1{width:100%;text-align:center;color:#3b94cc;font-size:25px;line-height:1.2;font-weight:700;padding-right:1.875%}
 @media screen and (min-width:600px){#masthead>.col-2>.row-1{font-size:45px;text-align:right}
-}#masthead>.col-2>.row-2{width:100%;text-align:center;color:#1ebca5;font-size:20px;line-height:1.2}
+}#masthead>.col-2>.row-2{width:100%;text-align:center;color:#1ebca5;font-size:20px;line-height:1.2;padding-right:1.875%}
 @media screen and (min-width:600px){#masthead>.col-2>.row-2{font-size:30px;text-align:right}
 }#masthead>.col-2 #site-navigation.row-3{margin:20px 0 0 0;width:100%;text-align:center}
 #masthead>.col-2 #site-navigation.row-3.toggled .menu-primary-container{display:block}
@@ -1408,15 +1410,17 @@ html[xmlns] .flexslider .slides{display:block}
 }#masthead>.col-2 #site-navigation.row-3 .menu-primary-container ul{margin:0;padding:0;text-align:right}
 #masthead>.col-2 #site-navigation.row-3 .menu-primary-container ul li{margin:20px 0;padding:0;list-style-type:none;text-align:center}
 #masthead>.col-2 #site-navigation.row-3 .menu-primary-container ul li:last-child{margin:20px 0 0 0}
-@media screen and (min-width:600px){#masthead>.col-2 #site-navigation.row-3 .menu-primary-container ul li{display:inline-block;margin:0 40px}
-#masthead>.col-2 #site-navigation.row-3 .menu-primary-container ul li:last-child{margin:0 20px}
+@media screen and (min-width:600px){#masthead>.col-2 #site-navigation.row-3 .menu-primary-container ul li{display:inline-block;margin:0 1.875%}
+#masthead>.col-2 #site-navigation.row-3 .menu-primary-container ul li:last-child{margin:0 1.875%}
 }#masthead>.col-2 #site-navigation.row-3 .menu-primary-container ul li a{color:#15759d;text-decoration:none;font-weight:700;font-size:20px}
 #masthead>.col-2 #site-navigation.row-3 .menu-primary-container ul li a:hover{color:#15759d}
-@media screen and (min-width:600px){#masthead>.col-2 #site-navigation.row-3 .menu-primary-container ul li a{font-size:30px}
+@media screen and (min-width:600px){#masthead>.col-2 #site-navigation.row-3 .menu-primary-container ul li a{font-size:25px}
 }#colophon{padding:20px 0;background-color:#3b94cc}
 #colophon>.wrapper{border-top:1px solid white;border-bottom:1px solid white;padding:40px;text-align:center}
 #colophon>.wrapper>.row-1{color:white}
 #colophon>.wrapper>.row-2{margin-top:10px;color:white}
+#colophon>.wrapper>.row-2 a{color:white;text-decoration:underline}
+#colophon>.wrapper>.row-2 a:hover{color:white}
 .template-index img.banner{display:block;width:100%}
 .template-index>.wrapper{padding:15px 20px 20px 20px}
 @media screen and (min-width:600px){.template-index>.wrapper{padding:4% 5% 5% 5%}
@@ -1437,7 +1441,10 @@ html[xmlns] .flexslider .slides{display:block}
 .template-index>.wrapper>.row-3>.col-2 .block h2{margin:15px 0;color:#3b94cc;text-align:center;text-transform:uppercase;font-size:25px;line-height:1;font-weight:500}
 @media screen and (min-width:600px){.template-index>.wrapper>.row-3>.col-2 .block h2{font-size:30px}
 }.template-index>.wrapper>.row-3>.col-2 .block .spacer{width:70px;margin:0 auto;border:1px solid #3b94cc}
-.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
+.template-page img.banner{display:block;width:100%}
+.template-page>.wrapper{padding:15px 20px 20px 20px}
+@media screen and (min-width:600px){.template-page>.wrapper{padding:4% 5% 5% 5%}
+}.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
 .infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer{display:none}
