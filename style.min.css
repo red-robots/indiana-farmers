@@ -1380,7 +1380,7 @@ html[xmlns] .flexslider .slides{display:block}
 @media screen and (min-width:600px){.copy h1{font-size:30px}
 }.copy h2{color:#1ebca5;font-size:20px;font-weight:500}
 @media screen and (min-width:600px){.copy h2{font-size:30px}
-}.copy h3{font-size:20px}
+}.copy h3{font-size:20px;color:#15759d}
 .copy ul,.copy ol{padding:0;margin:0 0 20px 20px;font-size:inherit}
 .copy ul li,.copy ol li{margin:0 0 0 20px;font-size:inherit;padding:0;list-style-type:square}
 .copy ul li a,.copy ol li a{cursor:pointer}
