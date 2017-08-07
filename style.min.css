@@ -1447,7 +1447,7 @@ html[xmlns] .flexslider .slides{display:block}
 }.template-dates>.wrapper>.dates{margin:20px 0 0 0}
 .template-dates>.wrapper>.dates>.row{margin:20px 0 0 0;border-top:1px solid darkgray;padding:20px 0 0 0}
 .template-dates>.wrapper>.dates>.row:first-child{margin:0}
-@media screen and (min-width:600px){.template-dates>.wrapper>.dates>.row>.col-1{width:60%;float:left}
+@media screen and (min-width:600px){.template-dates>.wrapper>.dates>.row>.col-1{width:60%;float:left;padding:0 2.5% 0 0}
 }@media screen and (min-width:1200px){.template-dates>.wrapper>.dates>.row>.col-1{width:70%}
 }.template-dates>.wrapper>.dates>.row>.col-2{margin:20px 0 0 0}
 @media screen and (min-width:600px){.template-dates>.wrapper>.dates>.row>.col-2{width:40%;margin:0;float:left}
