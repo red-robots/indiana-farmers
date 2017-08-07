@@ -89,7 +89,7 @@
         }
     }
 }
-.template-page, .error-404, .template-sitemap {
+.template-page, .error-404, .template-sitemap, .template-dates {
     img.banner {
         display: block;
         width: 100%;
@@ -98,6 +98,57 @@
         padding: 15px 20px 20px 20px;
         @media screen and (min-width: $tabwidth){
             padding: 4% 5% 5% 5%;
+        }
+    }
+}
+.template-dates {
+    >.wrapper {
+        >.dates {
+            margin: 20px 0 0 0;
+            >.row {
+                margin: 20px 0 0 0;
+                border-top: 1px solid darkgray;
+                padding: 20px 0 0 0;
+                &:first-child {
+                    margin: 0;
+                }
+                >.col-1 {
+                    @media screen and (min-width: $tabwidth){
+                        width: 60%;
+                        float: left;
+                    }
+                    @media screen and (min-width: $deskwidth){
+                        width: 70%;
+                    }
+                    header {
+                        h2 {
+
+                        }
+                    }
+                    .copy {
+
+                    }
+                }
+                >.col-2 {
+                    margin: 20px 0 0 0;
+                    @media screen and (min-width: $tabwidth){
+                        width: 40%;
+                        margin: 0;
+                        float: left;
+                    }
+                    @media screen and (min-width: $deskwidth){
+                        width: 30%;
+                    }
+                    img {
+                        width: 100%;
+                        display: block;
+                        margin: 0 0 10px 0;
+                        &:last-child {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
         }
     }
 }

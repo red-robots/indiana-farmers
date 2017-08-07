@@ -1441,10 +1441,20 @@ html[xmlns] .flexslider .slides{display:block}
 .template-index>.wrapper>.row-3>.col-2 .block h2{margin:15px 0;color:#3b94cc;text-align:center;text-transform:uppercase;font-size:25px;line-height:1;font-weight:500}
 @media screen and (min-width:600px){.template-index>.wrapper>.row-3>.col-2 .block h2{font-size:30px}
 }.template-index>.wrapper>.row-3>.col-2 .block .spacer{width:70px;margin:0 auto;border:1px solid #3b94cc}
-.template-page img.banner,.error-404 img.banner,.template-sitemap img.banner{display:block;width:100%}
-.template-page>.wrapper,.error-404>.wrapper,.template-sitemap>.wrapper{padding:15px 20px 20px 20px}
-@media screen and (min-width:600px){.template-page>.wrapper,.error-404>.wrapper,.template-sitemap>.wrapper{padding:4% 5% 5% 5%}
-}.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
+.template-page img.banner,.error-404 img.banner,.template-sitemap img.banner,.template-dates img.banner{display:block;width:100%}
+.template-page>.wrapper,.error-404>.wrapper,.template-sitemap>.wrapper,.template-dates>.wrapper{padding:15px 20px 20px 20px}
+@media screen and (min-width:600px){.template-page>.wrapper,.error-404>.wrapper,.template-sitemap>.wrapper,.template-dates>.wrapper{padding:4% 5% 5% 5%}
+}.template-dates>.wrapper>.dates{margin:20px 0 0 0}
+.template-dates>.wrapper>.dates>.row{margin:20px 0 0 0;border-top:1px solid darkgray;padding:20px 0 0 0}
+.template-dates>.wrapper>.dates>.row:first-child{margin:0}
+@media screen and (min-width:600px){.template-dates>.wrapper>.dates>.row>.col-1{width:60%;float:left}
+}@media screen and (min-width:1200px){.template-dates>.wrapper>.dates>.row>.col-1{width:70%}
+}.template-dates>.wrapper>.dates>.row>.col-2{margin:20px 0 0 0}
+@media screen and (min-width:600px){.template-dates>.wrapper>.dates>.row>.col-2{width:40%;margin:0;float:left}
+}@media screen and (min-width:1200px){.template-dates>.wrapper>.dates>.row>.col-2{width:30%}
+}.template-dates>.wrapper>.dates>.row>.col-2 img{width:100%;display:block;margin:0 0 10px 0}
+.template-dates>.wrapper>.dates>.row>.col-2 img:last-child{margin:0}
+.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
 .infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer{display:none}
