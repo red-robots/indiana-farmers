@@ -32,11 +32,23 @@ jQuery(document).ready(function ($) {
 	*	Colorbox
 	*
 	------------------------------------*/
-	$('a.gallery').colorbox({
-		rel:'gal',
-		width: '80%', 
-		height: '80%'
-	});
+	if($('a.popup').length>0){
+		$('a.popup').colorbox({
+			rel: 'gal',
+			inline: true,
+			width: '90%',
+			maxWidth: '960px',
+			close: '<i class="fa fa-times"></i>',
+			previous: '<i class="fa fa-chevron-left"></i>',
+			next: '<i class="fa fa-chevron-right"></i>'
+		});
+		$(window).on('resize', function () {
+			var width = window.innerWidth * 0.9 > 960 ? '960px' : '90%';
+			$.colorbox.resize({
+				width: width,
+			});
+		});
+	}
 	
 	/*
 	*

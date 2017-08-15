@@ -14,14 +14,21 @@ function acstarter_scripts() {
 	wp_enqueue_script( 
 			'acstarter-blocks', 
 			get_template_directory_uri() . '/assets/js/vendors.js', 
-			array(), '20120206', 
+			array('jquery'), '20120206', 
 			true 
 		);
 
 	wp_enqueue_script( 
 			'acstarter-custom', 
 			get_template_directory_uri() . '/assets/js/custom.js', 
-			array(), '20120206', 
+			array('acstarter-blocks'), '20120206', 
+			true 
+		);
+
+	wp_enqueue_script( 
+			'fontawesome', 
+			'https://use.fontawesome.com/8f931eabc1.js', 
+			array('acstarter-custom'), '20170815', 
 			true 
 		);
 

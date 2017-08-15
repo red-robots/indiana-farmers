@@ -101,6 +101,71 @@
         }
     }
 }
+.template-gallery {
+    img.banner {
+        display: block;
+        width: 100%;
+    }
+    >.wrapper.copy {
+        padding: 15px 20px 0 20px;
+        @media screen and (min-width: $tabwidth){
+            padding: 4% 5% 0 5%;
+        }
+    }
+    >.wrapper.gallery {
+        padding: 20px 20px 15px 20px;
+        @media screen and (min-width: $tabwidth){
+            padding: 2.5% 5% 2.5% 5%;
+        }
+        @media screen and (min-width: $deskwidth){
+            padding: 2.5% 5% 4% 5%;
+        }
+        .tile {
+            float: left;
+                width: 48%;
+                margin: 0 1% 1% 1%;
+            @media screen and (min-width: $tabwidth){
+                width: 15%;
+                margin: 0 2.5% 2.5% 2.5%;
+            }
+            @media screen and (min-width: $deskwidth){
+                width: 8%;
+                margin: 0 1% 1% 1%;
+            }
+            &:hover {
+                a {
+                    .overlay {
+                        padding: 10px;
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0,0,0,0.8);
+                        color: white;
+                        text-align: center;
+                        font-size: 14px;
+                    }
+                }
+            }
+            a {
+                position: relative;
+                display: block;
+                img {
+                    width: 100%;
+                    display: block;
+                }
+                .overlay {
+                    display: none;
+                }
+                .hidden {
+                    display: none;
+                }
+            }
+        }
+    }
+}
 .template-dates {
     >.wrapper {
         >.dates {
