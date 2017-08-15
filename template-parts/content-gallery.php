@@ -33,6 +33,7 @@
 						<div class="hidden">
 							<div class="popup-common" id="<?php echo $img['id'];?>">
 								<img src="<?php echo $img['url'];?>" alt="<?php echo $img['alt'];?>">
+								<div class="title"><?php echo $img['title'];?></div>
 							</div><!--#id-->
 						</div><!--.hidden-->
 					</a>

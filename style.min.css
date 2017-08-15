@@ -1423,7 +1423,9 @@ html[xmlns] .flexslider .slides{display:block}
 #colophon>.wrapper>.row-2 a:hover{color:white}
 .popup-common{background-color:white;padding:70px 20px 20px 20px}
 .popup-common img{width:100%;display:block}
-.template-index img.banner{display:block;width:100%}
+.popup-common .title{margin-top:10px;color:#3b94cc;font-size:16px}
+@media screen and (min-width:600px){.popup-common .title{font-size:20px}
+}.template-index img.banner{display:block;width:100%}
 .template-index>.wrapper{padding:15px 20px 20px 20px}
 @media screen and (min-width:600px){.template-index>.wrapper{padding:4% 5% 5% 5%}
 }.template-index>.wrapper>.row-1{width:100%;text-align:center;color:#3b94cc;font-size:25px;font-weight:700}
